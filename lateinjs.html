@@ -1,0 +1,23 @@
+<html>
+  <!-- Late Penalty Calculator in JavaScript -->
+  <!-- Jim Teresco, Fri Jun 28 17:53:57 EDT 2019 -->
+  <!-- Run by loading this page into a JS-enabled browser. -->
+  <head>
+    <script type="text/javascript">
+      function latePenalties() {
+        let lateness = 1;
+        let penalty = 0.0;
+        let ans = "";
+        while (penalty < 100) {
+          penalty = Math.pow(1.08, lateness);
+          ans += "Hour " + lateness + " late = " + penalty + "% penalty<br />";
+          lateness++;
+        }
+        return ans;
+      }
+    </script>
+  </head>
+  <body onload="document.getElementById('answer').innerHTML = latePenalties();">
+  <p id="answer">Replace this!</p>
+  </body>
+</html>
